@@ -1,0 +1,48 @@
+<!doctype html>
+<html data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+</head>
+
+<body style="user-select: none;">
+  <main style="gap: 2rem; display: flex; flex-direction: column; padding: 1rem; align-items: center; width: auto;">
+    <img src="./src/assets/electron-icon.gif" alt="logo" width="200px" />
+    <div>
+      <h1>Hello World!</h1>
+      We are using Node.js <span id="node-version"></span>, Chromium
+      <span id="chrome-version"></span>, and Electron
+      <span id="electron-version"></span>.
+    </div>
+    <div style="
+          display: flex;
+          flex-direction: column;
+          width: auto;
+          align-items: center;
+          background-color: blueviolet;
+          padding: 2rem;
+          border-radius: 1rem;
+        ">
+      <b>
+        <p>Count: <span id="count">0</span></p>
+      </b>
+      <div style="display: flex; flex-direction: row; gap: 1rem">
+        <button id="decreaseBtn" class="btn btn-primary"><b>-</b></button>
+        <button id="increaseBtn" class="btn btn-primary"><b>+</b></button>
+      </div>
+    </div>
+    <button id="sourceCodeBtn" class="btn btn-primary">Open Source Code</button>
+  </main>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="dist/renderer.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
